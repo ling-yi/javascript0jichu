@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<div class="editable" id="richedit" contenteditable>aaaaaaa</div>
+	</body> 
+	<script type="text/javascript">
+		//document.execCommand("bold", false, null);
+		//document.execCommand("italic", false, null);
+		alert(document.queryCommandEnabled("bold"));
+		alert(document.queryCommandState("bold"));
+	</script>
+</html>

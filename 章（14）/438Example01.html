@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<iframe name="richedit" style="height:100px;width:100px;" src="blank.html"></iframe>
+
+	<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(){
+			frames["richedit"].document.designMode = "on";
+		});
+	</script>
+</html>

@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			window.color = "red";
+			var o = { color: "blue" };
+			
+			function sayColor(){
+				alert(this.color);
+			}
+			
+			var objectColor = sayColor.bind(o);
+			objectColor();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

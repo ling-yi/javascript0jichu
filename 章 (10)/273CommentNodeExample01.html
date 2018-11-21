@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="myDiv"><!--A comment --></div>
+	</body>  
+	<script type = "text/javascript">
+		var div = document.getElementById("myDiv");
+		var comment = div.firstChild;
+		alert(comment.data);
+		
+		var comment1 = document.createComment("123443212");
+		div.appendChild(comment1);
+		
+		alert(div.childNodes[1].data);
+		
+	</script>
+</html>

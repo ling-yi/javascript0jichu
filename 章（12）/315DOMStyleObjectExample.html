@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="myDiv" style="background-color:blue;width:10px;height:25px"></div>
+	</body>  
+	<script type = "text/javascript">
+		var myDiv = document.getElementById("myDiv");
+		
+		alert(myDiv.style.cssText);
+		myDiv.style.cssText = "width: 25px; height: 100px;background-color: green";
+		alert(myDiv.style.cssText);
+		
+		var prop, value, value1, i, len;
+		for (var i=0, len=myDiv.style.length; i < len; i++){
+			prop = myDiv.style[i];
+			value = myDiv.style.getPropertyCSSValue(prop);
+			alert(prop + ":" + value.cssText + "(" + value.cssValueType + ")");
+		}
+	</script>
+</html>

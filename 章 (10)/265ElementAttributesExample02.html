@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="myDiv" my_special_attribute="Hello!" align="left" ></div>
+	</body>  
+	<script type = "text/javascript">
+		var div = document.getElementById("myDiv");
+		alert(div.getAttribute("my_special_attribute"));
+		alert(div.my_special_attribute);
+		alert(div.getAttribute("id"));
+		alert(div.getAttribute("align"));
+		
+	</script>
+</html>

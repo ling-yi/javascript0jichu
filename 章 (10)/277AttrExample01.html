@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<ul id="myList"></ul>
+	</body>  
+	<script type = "text/javascript">
+		var ul = document.getElementById("myList");
+		var attr = document.createAttribute("align");
+		attr.value = "left";
+		ul.setAttributeNode(attr);
+		alert(ul.attributes["align"].value);
+		alert(ul.getAttributeNode("align").value);
+		alert(ul.getAttribute("align"));
+		
+	</script>
+</html>

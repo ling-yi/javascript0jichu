@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function factorial(num){
+				if(num <= 1){
+					return 1;
+				}else{
+					return num * factorial(num-1);
+				}
+			}
+			
+			var anotherFactorial = factorial;
+			factorial = null;
+			alert(anotherFactorial(4));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

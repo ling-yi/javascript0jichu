@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function Person(){
+			}
+			
+			Person.prototype = {
+				name : "Nicholas",
+				age : 29,
+				job : "Software Engineer",
+				sayName : function (){
+					alert(this.name);
+				}
+			};
+			
+			Object.defineProperty(Person.prototype, "constructor", {
+				enumerable: false,
+				value: Person
+			});
+			
+			var friend = new Person();
+			
+			Person.prototype.sayHi = function(){
+				alert("Hi");
+			};
+			
+			friend.sayHi();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

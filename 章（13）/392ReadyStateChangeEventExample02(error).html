@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+		
+		<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(){
+			var link = document.createElement("link");
+			link.style = "text/css";
+			link.rel = "stylesheet";
+			//alert("CSS Loaded");
+			
+			EventUtil.addHandler(link, "readystatechange", function(event){
+				alert("CSS Loaded");
+				event = EventUtil.getEvent(event);
+				var target = EventUtil.getTarget(event);
+				
+				
+				if(target.readyState == "loaded" || target.readyState == "complete"){
+					EventUtil.removeHandler(target, "readystatechange", arguments.callee);
+					alert("CSS Loaded");
+				}
+			});
+			
+			link.href = "example.css";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		});
+	</script>
+	</head>
+	<body>
+		<div id="myDiv">Right click or Ctrl+click me to get a custom context menu. Click anywhere else to get the default context menu.</div>
+		
+	</body> 
+	
+</html>

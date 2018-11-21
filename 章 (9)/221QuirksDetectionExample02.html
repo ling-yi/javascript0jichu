@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var hasEnumShadowsQuirk = function(){
+				var o = {toString : function(){}};
+				var count = 0;
+				for(var prop in o){
+					if (prop == "toString"){
+						count ++;
+					}
+				}
+				
+				return (count > 1);
+			}();
+			alert(hasEnumShadowsQuirk);
+		</script>
+	</head>
+	<body>
+	
+	</body>  
+	
+</html>

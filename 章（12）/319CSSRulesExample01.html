@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computed Styles Example</title>
+	<style type="text/css">
+		#myDiv {
+			background-color: blue;
+			width: 100px;
+			height: 200px;
+		}
+	</style>
+</head>
+	<body>
+		<div id="myDiv"></div>
+	</body>  
+	<script type = "text/javascript">
+		var sheet = document.styleSheets[0];
+		var rules = sheet.dcssRules || sheet.rules;
+		var rule = rules[0];
+		alert(rule.selectorText);
+		alert(rule.cssText);
+		alert(rule.style.cssText);
+		alert(rule.style.backgroundColor);
+		alert(rule.style.width);
+		alert(rule.style.height);
+		rule.style.backgroundColor = "red";
+		
+		sheet.insertRule("body{background-color: green}",0)
+	</script>
+</html>

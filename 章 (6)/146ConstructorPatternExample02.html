@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function Person(name, age, job){
+				this.name = name;
+				this.age = age;
+				this.job = job;
+				this.sayName = function(){
+					alert(this.name);
+				};
+			}
+			
+			var person = new Person("Nicholas", 29, "Software Engineer");
+			person.sayName();
+			
+			Person("Greg", 27, "Doctor");
+			window.sayName();
+			
+			var o = new Object();
+			Person.call(o, "Kristen", 25, "Nurse");
+			o.sayName();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

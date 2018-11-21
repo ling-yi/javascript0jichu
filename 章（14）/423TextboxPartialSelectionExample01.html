@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm">
+			<input type="text" size="25" maxlength="50" value="initial value">
+			<textarea rows="25" cols="5" name="textbox1">initial value</textarea>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		function selectText(textbox, startIndex, stopIndex){
+			if(textbox.setSelectionRange){
+				textbox.setSelectionRange(startIndex, stopIndex);
+			}else if(textbox.createTextRange){
+				var range = textbox.createTextRange();
+				range.collapse(true);
+				range.moveStart("character", startIndex);
+				range.moveEnd("character", stopIndex);
+				range.select();
+			}
+			
+			textbox.focus();
+		}
+		
+		var textbox = document.forms[0].elements["textbox1"];
+		
+		textbox.value = "Hello world!";
+		
+		selectText(textbox, 0, textbox.value.length);
+		//selectText(textbox, 0, 3);
+		//selectText(textbox, 4, 7);
+	</script>
+</html>

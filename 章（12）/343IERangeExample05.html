@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<p id="p1"><b>Hello</b> world!</p>
+	</body>  
+	<script type = "text/javascript">
+		var range1 = document.body.createTextRange();
+		var range2 = document.body.createTextRange();
+		
+		range1.findText("Hello world!");
+		range2.findText("Hello");
+		
+		alert(range1.compareEndPoints("StartToStart", range2));
+		alert(range1.compareEndPoints("EndToEnd", range2));
+		
+	</script>
+</html>

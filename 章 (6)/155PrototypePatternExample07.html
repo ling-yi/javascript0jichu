@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function Person(){
+			}
+			
+			Person.prototype = {
+				name : "Nicholas",
+				age : 29,
+				job : "Software Engineer",
+				sayName : function (){
+					alert(this.name);
+				}
+			};
+			
+			var friend = new Person();
+			
+			alert(friend instanceof Object);
+			alert(friend instanceof Person);
+			alert(friend.constructor == Person);
+			alert(friend.constructor == Object);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

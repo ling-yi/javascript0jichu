@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		var person = {
+			name : "Nicholas",
+			friends : ["Shelby", "Court", "Van"]
+		};
+		
+		var antherPerson = Object.create(person);
+		antherPerson.name = "Greg";
+		antherPerson.friends.push("Rob");
+		
+		var yetAntherPerson = Object.create(person);
+		yetAntherPerson.name = "Linda";
+		yetAntherPerson.friends.push("Barbie");
+		
+		alert(person.friends);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

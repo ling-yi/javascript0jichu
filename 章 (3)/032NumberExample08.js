@@ -1,0 +1,12 @@
+var number1 = parseFloat("1234blue");
+var number2 = parseFloat("0xA");
+var number3 = parseFloat("22.5");
+var number4 = parseFloat("22.5.456");
+var number5 = parseFloat("0908.5");
+var number6 = parseFloat("3.125e7");
+alert(number1);
+alert(number2);
+alert(number3);
+alert(number4);
+alert(number5);
+alert(number6);

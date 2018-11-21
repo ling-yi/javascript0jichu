@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var person = {};
+			Object.defineProperty(person, "name",{
+				writable: false,
+				value: "Nicholas"
+			});
+			
+			alert(person.name);
+			person.name = "Greg";
+			alert(person.name);
+			delete person.name;
+			alert(person.name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

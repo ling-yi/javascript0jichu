@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+		
+		<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(){
+			var script = document.createElement("script");
+			
+			EventUtil.addHandler(script, "readystatechange", function(event){
+				event = EventUtil.getEvent(event);
+				var target = EventUtil.getTarget(event);
+				
+				if(target.readyState == "loaded" || target.readyState == "complete"){
+					EventUtil.removeHandler(target, "readystatechange", arguments.callee);
+					alert("Script Loaded");
+				}
+			});
+			script.src = "example.js";
+			document.body.appendChild(script);
+		});
+	</script>
+	</head>
+	<body>
+		<div id="myDiv">Right click or Ctrl+click me to get a custom context menu. Click anywhere else to get the default context menu.</div>
+		
+	</body> 
+	
+</html>

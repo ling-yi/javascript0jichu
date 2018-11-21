@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<a id="myLink" href="http://www.w3school.com.cn">W3School</a>
+	</body> 
+	
+	<script type="text/javascript">
+		EventUtil.addHandler(window, "unload", function(event){
+			alert("Unloaded");
+			event = EventUtil.getEvent(event);
+			alert(EventUtil.getTarget(event).src);
+		});
+	</script>
+</html>

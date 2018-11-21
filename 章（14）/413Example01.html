@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<input type="submit" value="Submit Form">
+		<button type="submit">Submit Form</buton>
+		<input type="image" src="smile.gif">
+		<form id="myForm"></form>
+	</body> 
+	<script type="text/javascript">
+		var form = document.getElementById("myForm");
+		EventUtil.addHandler(form, "submit", function(event){
+			event = EventUtil.getEvent(event);
+			EventUtil.preventDefault(event);
+		});
+	</script>
+</html>

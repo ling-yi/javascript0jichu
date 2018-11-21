@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var hasDontEnumQuirk = function(){
+				var o = {toString : function(){}};
+				for(var prop in o){
+					if(prop = "toString"){
+						return false;
+					}
+				}
+				
+				return true;
+			}();
+			
+			alert(hasDontEnumQuirk);
+		</script>
+	</head>
+	<body>
+	
+	</body>  
+	
+</html>

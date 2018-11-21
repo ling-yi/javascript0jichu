@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm">
+			<input type="text" autofocus>
+		</form>
+		
+	</body> 
+	<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(event){
+			var element = document.forms[0].elements[0];
+			if(element.autofocus !== true){
+				element.focus();
+				console.log("JS focus");
+			}
+		});
+		
+	</script>
+</html>

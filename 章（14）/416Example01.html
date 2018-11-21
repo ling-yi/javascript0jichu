@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm">
+			<ul>
+				<li><input type="radio" name="color" value="red">Red</li>
+				<li><input type="radio" name="color" value="green">Green</li>
+				<li><input type ="radio" name="color" value="blue">Blue</li>
+			</ul>
+		</form>
+		
+	</body> 
+	<script type="text/javascript">
+		var form = document.getElementById("myForm");
+		var field = form.elements[0];
+		
+		field.value = "Another value";
+		
+		alert(field.form === form);
+		
+		field.focus();
+		
+		field.disabled = true;
+		
+		field.type = "checkbox";
+	</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<div id="myDiv">Right click or Ctrl+click me to get a custom context menu. Click anywhere else to get the default context menu.</div>
+		<ul id="myMenu" style="position:absolute;visibiliity:hidden;background-color:silver">
+			<li><a href="http://www.nczonline.net">Nicholas' site</a></li>
+			<li><a href="http://www.wrox.com">Wrox site</a></li>
+			<li><a href="http://www.yahoo.com">Yahoo!</a></li>
+		</ul>
+	</body> 
+	<script type="text/javascript">
+		EventUtil.addHandler(document, "DOMContentLoaded", function(event){
+			alert("Content loaded");
+		});
+	</script>
+</html>

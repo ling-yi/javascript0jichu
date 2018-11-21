@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computed Styles Example</title>
+	<style type="text/css">
+		#myDiv {
+			background-color: blue;
+			width: 100px;
+			height: 200px;
+		}
+	</style>
+</head>
+	<body>
+		
+	</body>  
+	<script type = "text/javascript">
+		var sheet = null;
+		for (var i=0,len=document.styleSheets.length; i < len; i++){
+			sheet = document.styleSheets[i];
+			alert(sheet.disabled);
+			alert(sheet.href);
+		}
+	</script>
+</html>

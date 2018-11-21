@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<p id="p1"><b>Hello</b> world!</p>
+	</body>  
+	<script type = "text/javascript">
+		var range = document.body.createTextRange();
+		var p1 = document.getElementById("p1");
+		range.moveToElementText(p1);
+		alert(range.htmlText);
+	</script>
+</html>

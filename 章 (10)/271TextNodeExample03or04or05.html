@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		
+	</body>  
+	<script type = "text/javascript">
+		var element = document.createElement("div");
+		element.className = "message";
+		
+		var textNode = document.createTextNode("Hello world!");
+		element.appendChild(textNode);
+		
+		var anotherTextNode = document.createTextNode("Yippee!");
+		element.appendChild(anotherTextNode);
+		
+		document.body.appendChild(element);
+		
+		alert(element.firstChild.nodeValue);
+		
+		alert(element.childNodes.length);
+		
+		element.normalize();
+		alert(element.childNodes.length);
+		alert(element.firstChild.nodeValue);
+	</script>
+</html>

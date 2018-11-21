@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function Person(name, age, job){
+				this.name = name;
+				this.age = age;
+				this.job = job;
+				this.sayName = function(){
+					alert(this.name);
+				};
+			}
+			
+			var person1 = new Person("Nicholas", 29, "Software Engineer");
+			var person2 = new Person("Greg", 27, "Doctor");
+			
+			alert(person1.sayName == person2.sayName);
+			
+			person1.sayName();
+			person2.sayName();
+			
+			alert(person1.constructor == Person);
+			alert(person2.constructor == Person);
+			
+			alert(person1 instanceof Object);
+			alert(person2 instanceof Person);
+			alert(person1 instanceof Object);
+			alert(person2 instanceof Person);
+			
+			alert(person1.constructor == Object);
+			
+			var person3 = new Object();
+			alert(person3.constructor == Object);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

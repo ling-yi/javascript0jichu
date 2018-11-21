@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm" novalidate>
+			<select name="location" id="selLocation" multiple>
+				<option value="Sunnyvale, CA">Sunnyvale</option>
+				<option value="Los Angeles, CA">Los Angeles</option>
+				<option value="Mountain, CA">Mountain</option>
+				<option value="" selected="true">China</option>
+				<option>Australia</option>
+			</select>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		var selectbox = document.forms[0].elements[0];
+	
+		//selectbox.removeChild(selectbox.options[0]);
+		
+		//selectbox.remove(1);
+		
+		//selectbox.options[2] = null;
+		
+		function clearSelectbox(selectbox){
+			for(var i=0, len=selectbox.options.length; i<len; i++){
+				selectbox.remove(0);
+			}
+		}
+		
+		clearSelectbox(selectbox);
+	</script>
+</html>

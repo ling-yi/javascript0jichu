@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<iframe name="richedit" style="height:100px;width:100px;" src="blank.html"></iframe>
+
+	<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(){
+			frames["richedit"].document.designMode = "on";
+			frames["richedit"].document.execCommand("backcolor", false, "red");
+			frames["richedit"].document.execCommand("italic", false, null);
+			frames["richedit"].document.execCommand("createlink", false, "http://www.wrox.com");
+			frames["richedit"].document.execCommand("formatblock", false, "<h1>");
+		});
+	</script>
+</html>

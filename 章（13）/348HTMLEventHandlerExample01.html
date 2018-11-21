@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function showMessage(){
+				alert("Hello world!")
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Click me" onClick="alert('Clicked')" />
+		<input type="button" value="Click me1" onClick="showMessage()" />
+		<input type="button" value="Click me2" onClick="alert(event.type)" />
+		<input type="button" value="Click me3" onClick="alert(this.value)" />
+		<input type="button" value="Click me4" onClick="alert(value)" />
+	</body>  
+</html>

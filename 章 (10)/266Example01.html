@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="myDiv" class="bd" title="Body text"  dir="ltr" >12公寓ji34</div>
+	</body>  
+	<script type = "text/javascript">
+		var div = document.getElementById("myDiv");
+		
+		alert(div.attributes.getNamedItem("id").nodeValue);
+		div.attributes["id"].nodeValue = "someOtherId";
+		alert(div.attributes.getNamedItem("id").nodeValue);
+		
+		alert(div.attributes["class"].nodeValue);
+		div.attributes.removeNamedItem("class");
+		alert(div.attributes["class"].nodeValue);
+	</script>
+</html>

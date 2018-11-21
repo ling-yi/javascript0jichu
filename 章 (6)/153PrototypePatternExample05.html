@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function hasProtoptypeProperty(object,name){
+				return !object.hasOwnProperty(name) && (name in object);
+			}
+		
+			function Person(){
+			}
+			
+			Person.prototype.name = "Nicholas";
+			Person.prototype.age = 29;
+			Person.prototype.job = "Software Engineer";
+			Person.prototype.sayName = function(){
+				alert(this.name);
+			};
+			
+			var person = new Person();
+			alert(hasProtoptypeProperty(person,"name"));
+			
+			person.name = "Greg";
+			alert(hasProtoptypeProperty(person,"name"));
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

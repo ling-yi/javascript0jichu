@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var text = "cat, bat, sat, fat";
+			var pos = text.search(/at/);
+			alert(pos);
+			
+			var result = text.replace("at", "ond");
+			alert(result);
+			
+			result = text.replace(/at/g, "ond");
+			alert(result);
+			
+			result = text.replace(/(.at)/g, "word ($1)");
+			alert(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<div class="editable" id="richedit" contenteditable>aaaaaaa</div>
+	</body> 
+	<script type="text/javascript">
+		var book ={
+			title: "Professional JavaScript",
+			authors: ["Nicholas C. Zakes"],
+			edition: 3,
+			year: 2011
+		};
+		
+		var jsonText0 = JSON. stringify(book, null, 4);
+		alert(jsonText0);
+		
+		var jsonText1 = JSON. stringify(book, null, " - -");
+		alert(jsonText1);
+	</script>
+</html>

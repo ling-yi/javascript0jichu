@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form id="myForm"></form>
+		<input type="reset" value="Reset Form">
+		<button type="reset">Reset Form</button>
+	</body> 
+	<script type="text/javascript">
+		var form = document.getElementById("myForm");
+		EventUtil.addHandler(form, "reset", function(event){
+			event = EventUtil.getEvent(event);
+			EventUtil.preventDefault(event);
+		});
+	</script>
+</html>

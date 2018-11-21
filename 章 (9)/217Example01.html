@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function getElement(id){
+				if(document.getElementById){
+					return document.getElementById(id);
+				}else if(document.all){
+					return document.all(id);
+				}else{
+					throw new Error("Np way to retrieve element!");
+				}
+			}
+		</script>
+	</head>
+	<body>
+	
+	</body>  
+	
+</html>

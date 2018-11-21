@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm" novalidate>
+			<select name="location" id="selLocation" multiple>
+				<option value="Sunnyvale, CA">Sunnyvale</option>
+				<option value="Los Angeles, CA">Los Angeles</option>
+				<option value="Mountain, CA">Mountain</option>
+				<option value="" selected="true">China</option>
+				<option>Australia</option>
+			</select>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		var selectbox = document.forms[0].elements[0];
+	
+		var newOption = new Option("Option text1", "Option value1");
+		var newOption0 = new Option("Option text0", "Option value0");
+		
+		selectbox.add(newOption, undefined);
+		selectbox.add(newOption0, selectbox.options[0]);
+	</script>
+</html>

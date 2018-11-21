@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var re = null, i;
+			
+			for (i = 0; i < 4; i ++){
+				re = /cat/gi;
+				alert(re.test("Catastcatrophecat"));
+			}
+			
+			for (i = 0; i < 4; i ++){
+				re = new RegExp("cat", "g");
+				alert(re.test("catastrophe"));
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

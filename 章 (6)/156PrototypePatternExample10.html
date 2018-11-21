@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function Person(){
+			}
+			
+			var friend = new Person();
+			
+			Person.prototype = {
+				name : "Nicholas",
+				age : 29,
+				job : "Software Engineer",
+				sayName : function (){
+					alert(this.name);
+				}
+			};
+			
+			friend.sayName();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<input type="button" id="myBtn" value="click1" />
+		<a id="myLink" href="http://www.w3school.com.cn">W3School</a>
+	</body> 
+	
+	<script type="text/javascript">
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(event){
+			alert(event.eventPhase);
+			//event.stopPropagation();
+		};
+		
+		document.body.addEventListener("click",function(event){
+			alert(event.eventPhase);
+			//event.stopPropagation();
+		},true);
+		
+		document.body.onclick = function(event){
+			alert(event.eventPhase);
+			event.stopPropagation();
+		};
+	</script>
+</html>

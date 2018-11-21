@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function htmlEscape(text){
+				return text.replace(/[<>"&]/g,function(match, pos, originalText){
+					switch(match){
+						case "<":
+							return "&lt";
+							break;
+						case ">":
+							return "&gt";
+							break;
+						case "&":
+							return "&amp";
+							break;
+						case "\"":
+							return "&quot";
+					}
+				});
+			}
+			
+			alert(htmlEscape("<p class=\"greeting\">Hello word!</p>"));
+			
+			var colorText = "red,bule,green,yellow";
+			var colors1 = colorText.split(",");
+			var colors2 = colorText.split(",",2);
+			var colors3 = colorText.split(/[^\,]+/);
+			alert(colors1);
+			alert(colors2);
+			alert(colors3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

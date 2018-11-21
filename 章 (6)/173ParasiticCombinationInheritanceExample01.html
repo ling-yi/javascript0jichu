@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		function object(o){
+			function F(){};
+			F.prototype = o;
+			return new F();
+		}
+		
+		function inheritPrototype(subType,superType){
+			var prototype = object(superType.prototype);
+			prototype.constructor = subType;
+			subType.prototype = prototype;
+		} 
+		
+		function SuperType(name){
+			this.name = name;
+			this.colors = ["red", "blue", "green"];
+		}
+		
+		SuperType.prototype.sayName = function(){
+			alert(this.name);
+		};
+		
+		function SubType(name, age){
+			SuperType.call(this, name);
+			
+			this.age = age;
+		}
+		
+		inheritPrototype(SubType, SuperType);
+		SubType.prototype.sayAge = function(){
+			alert(this.age);
+		};
+		
+		var instance1 = new SubType("Nicholas", 29);
+		instance1.colors.push("black");
+		alert(instance1.colors);
+		instance1.sayName();
+		instance1.sayAge();
+		
+		var instance2 = new SubType("Nich", 22);
+		alert(instance2.colors);
+		instance2.sayName();
+		instance2.sayAge();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

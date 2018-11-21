@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		function object(o){
+			function F(){};
+			F.prototype = o;
+			return new F();
+		}
+		
+		function createAnother(original){
+			var clone = object(original);
+			clone.sayHi = function(){
+				alert("Hi")
+			};
+			return clone;
+		}
+		
+		var person = {
+			name : "Nicholas",
+			friends : ["Shelby", "Court", "Van"]
+		};
+		
+		var antherPerson = createAnother(person);
+		antherPerson.sayHi();
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

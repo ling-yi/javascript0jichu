@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<input type="button" id="myBtn" value="click1" />
+		<a id="myLink" href="http://www.w3school.com.cn">W3School</a>
+	</body> 
+	
+	<script type="text/javascript">
+		var link = document.getElementById("myLink");
+		link.onclick = function(event){
+			event = EventUtil.getEvent(event);
+			EventUtil.preventDefault(event);
+		};
+	</script>
+</html>

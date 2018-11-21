@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		var person = {
+			name : "Nicholas",
+			friends : ["Shelby", "Court", "Van"]
+		};
+		
+		var antherPerson = Object.create(person,{
+			name :{
+				value : "Greg"
+			}
+		});
+		
+		alert(antherPerson.name);
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

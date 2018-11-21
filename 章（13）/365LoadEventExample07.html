@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		
+	</body> 
+	
+	<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(){
+			var script = document.createElement("script");
+			EventUtil.addHandler(script,"load", function(element){
+				alert("Loaded");
+			});
+			script.src = "example.js";
+			document.body.appendChild(script);
+		});
+	</script>
+</html>

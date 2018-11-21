@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm" novalidate>
+			<ul>
+				<li>文本：<input type="text" name="username" required></li>
+				<li>邮箱：<input type="email" name="email" required></li>
+				<li>网站：<input type="url" name="homepage" required></li>
+				<li>数字：<input type="number" min="0" max="100" step="5" name="count1" required></li>
+				<li>模式：<input type="text" pattern="\d+" name="count" required></li>
+				<li><input type="submit" value="提交" id="submit"></li>
+			</ul>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		var input = document.createElement("input");
+		input.type = "email";
+		var isEmailSupported = (input.type == "email");
+		alert(isEmailSupported);
+		
+		var pattern = document.forms[0].elements["count"].pattern;
+		alert(pattern);
+		
+		var form = document.getElementById("myForm");
+		EventUtil.addHandler(form, "submit", function(event){
+			var input1 = document.forms[0].elements[0];
+			if(!input1.checkValidity()){
+				if(input1.validity.valueMissing){
+					alert("没有值")
+				}else if(input1.validity.typeMismatch){
+					alert("值的类型不对");
+				}else{
+					alert ("其他错误");
+				}
+			}else{
+				alert("第一个字段有效");
+			}
+		});	
+	</script>
+</html>

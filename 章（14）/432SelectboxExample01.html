@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm" novalidate>
+			<select name="location" id="selLocation" multiple>
+				<option value="Sunnyvale, CA">Sunnyvale</option>
+				<option value="Los Angeles, CA">Los Angeles</option>
+				<option value="Mountain, CA">Mountain</option>
+				<option value="" selected="true">China</option>
+				<option>Australia</option>
+			</select>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		var selectbox = document.forms[0].elements["location"];
+		
+		EventUtil.addHandler(selectbox, "change", function(event){
+			var selectedIndex = selectbox.selectedIndex;
+			var selectedOption = selectbox.options[selectedIndex];
+			alert("Selected index: " + selectedIndex + "\nSelected text: " + selectedOption.text + "\nSelected value: " + selectedOption.value);
+		});
+		
+		
+	</script>
+</html>

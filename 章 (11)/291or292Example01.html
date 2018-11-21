@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div class="bd user disabled"></div>
+	</body>  
+	<script type = "text/javascript">
+		var div = document.getElementsByClassName("bd")[0];
+		alert(div.className);
+		div.classList.remove("disabled");
+		alert(div.className);
+		div.classList.add("current");
+		alert(div.className);
+		div.classList.toggle("user");
+		alert(div.className);
+	</script>
+</html>

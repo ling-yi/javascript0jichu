@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="myDiv" data-appId="123445" data-myname="Nicholas"></div>
+	</body>  
+	<script type = "text/javascript">
+		var div = document.getElementById("myDiv");
+		
+		var appId = div.dataset.appId;
+		var myname = div.dataset.myname;
+		
+		alert(appId);
+		alert(myname);
+		
+		div.dataset.myname = "Michael";
+		var div = document.getElementById("myDiv");
+		alert(myname);
+		
+	</script>
+</html>

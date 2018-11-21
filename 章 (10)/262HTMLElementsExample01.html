@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="myDiv" class="bd" title="Body text" lang="en" dir="ltr" >12公寓ji34</div>
+	</body>  
+	<script type = "text/javascript">
+		var div = document.getElementById("myDiv");
+		alert(div.id);
+		alert(div.className);
+		alert(div.title);
+		alert(div.lang);
+		alert(div.dir);
+		
+		div.id = "someOtherId";
+		div.className = "ft";
+		div.title = "some other text";
+ 		div.lang = "fr";
+		div.dir = "rtl";
+		
+		alert(div.id);
+		alert(div.className);
+		alert(div.title);
+		alert(div.lang);
+		alert(div.dir);
+	</script>
+</html>

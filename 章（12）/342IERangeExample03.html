@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<p id="p1"><b>Hello</b> world!</p>
+	</body>  
+	<script type = "text/javascript">
+		var range = document.body.createTextRange();
+		var found = range.findText("Hello");
+		//range.text = "Howdy";
+		range.pasteHTML("<em>Howdy</em>")
+	</script>
+</html>

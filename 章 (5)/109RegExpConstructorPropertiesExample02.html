@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var text = "this has been a short summer";
+			var pattern = /(.)hort/g;
+			
+			if (pattern.test (text)){
+				alert(RegExp.$_);
+				alert(RegExp["$`"]);
+				alert(RegExp["$'"]);
+				alert(RegExp["$&"]);
+				alert(RegExp["$+"]);
+				alert(RegExp["$*"]);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

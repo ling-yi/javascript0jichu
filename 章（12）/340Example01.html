@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Computed Styles Example</title>
+	</head>
+	<body>
+		<p id="p1"><b>Hello</b> world!</p>
+	</body>  
+	<script type = "text/javascript">
+		var p1 = document.getElementById("p1");
+		var range1 = document.createRange();
+		var range2 = document.createRange();
+		
+		range1.selectNodeContents(p1);
+		range2.selectNodeContents(p1);
+		range2.setEndBefore(p1.lastChild);
+		range2.detach();
+		
+		alert(range1.compareBoundaryPoints(Range.START_TO_START, range2));
+		alert(range1.compareBoundaryPoints(Range.END_TO_END, range2));
+	</script>
+</html>

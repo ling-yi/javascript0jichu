@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<input type="button" id="myBtn" value="click1" />
+	</body> 
+	
+	<script type="text/javascript">
+		var btn = document.getElementById("myBtn");
+		var handler = function(){
+			alert(this.id);
+		};
+		btn.addEventListener("click",handler,false);
+		btn.removeEventListener("click",handler,false);
+	</script>
+</html>

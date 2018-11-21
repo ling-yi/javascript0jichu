@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function Person(name, age, job){
+				this.name = name;
+				this.age = age;
+				this.job = job;
+				
+				if (typeof this.sayName != "function"){
+						Person.prototype.sayName = function(){
+							alert(this.name);
+						}
+				}
+			}
+			
+			var person = new Person("Tom", 22, "Teacher");
+			person.sayName();
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

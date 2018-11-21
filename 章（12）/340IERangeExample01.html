@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<p id="p1"><b>Hello</b> world!</p>
+	</body>  
+	<script type = "text/javascript">
+		var range = document.body.createTextRange();
+		var found = range.findText("Hello");
+		//var foundAgain = range.findText("Hello", 1)
+		range.moveStart("word",1);
+		//range.expand("word");
+		//range.moveEnd("character", 1);
+		
+		alert(found);
+		//alert(foundAgain);
+		alert(range.text);
+	</script>
+</html>

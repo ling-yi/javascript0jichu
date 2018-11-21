@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var text = "cat, bat, sat, fat";
+			
+			var pattern1 = /.at/;
+			
+			var matches = pattern1.exec(text);
+			alert(matches.index);
+			alert(matches[0]);
+			alert(pattern1.lastIndex);
+			
+			matches = pattern1.exec(text);
+			alert(matches.index);
+			alert(matches[0]);
+			alert(pattern1.lastIndex);
+			
+			var pattern2 = /.at/g;
+			
+			var matches = pattern2.exec(text);
+			alert(matches.index);
+			alert(matches[0]);
+			alert(pattern2.lastIndex);
+			
+			matches = pattern2.exec(text);
+			alert(matches.index);
+			alert(matches[0]);
+			alert(pattern2.lastIndex);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

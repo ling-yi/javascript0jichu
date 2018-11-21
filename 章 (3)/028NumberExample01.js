@@ -1,0 +1,16 @@
+var floatNum1 = 1.1;
+var floatNum2 = 0.1;
+var floatNum3 = .1;
+var floatNum4 = 1.;
+var floatNum5 = 1.0;
+var floatNum6 = 3.125e7;
+var floatNum7 = 0.000000007;
+var a=0,b=0.3;
+alert(floatNum1);
+alert(floatNum2);
+alert(floatNum3);
+alert(floatNum4);
+alert(floatNum5);
+alert(floatNum6);
+alert(floatNum7);
+alert(a+b==0.3000000000000000);

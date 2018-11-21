@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		<form method="post" id="myForm">
+			<input type="text" size="25" maxlength="50" value="initial value">
+			<textarea rows="25" cols="5" name="textbox1">initial value</textarea>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		var textbox = document.forms[0].elements["textbox1"];
+		alert(textbox.value);
+		
+		textbox.value = "Some new value";
+	</script>
+</html>

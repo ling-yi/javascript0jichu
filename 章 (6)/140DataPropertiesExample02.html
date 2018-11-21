@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var person = {};
+			Object.defineProperty(person, "name",{
+				configurable: false,
+				value: "Nicholas"
+			});
+			
+			alert(person.name);
+			delete person.name;
+			alert(person.name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

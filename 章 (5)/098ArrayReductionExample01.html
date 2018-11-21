@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var values = [1,2,3,4,5];
+			var sum = values.reduce(function(prev,cur,index,array){
+				return prev + cur;
+			});
+			
+			var sum1 = values.reduceRight(function(a,b,c,d){
+				return a*b;
+			});
+			
+			alert(sum);
+			alert(sum1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

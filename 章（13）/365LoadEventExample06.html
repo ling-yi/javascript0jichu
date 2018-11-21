@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="354EventUtil.js"></script>
+	</head>
+	<body>
+		
+	</body> 
+	
+	<script type="text/javascript">
+		EventUtil.addHandler(window, "load", function(){
+			var image = new Image();
+			EventUtil.addHandler(image, "load",function(event){
+				alert("Image loaded!");
+			});
+			image = "smile.gif";
+		});
+	</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<input type="button" id="myBtn" value="click1" />
+	</body> 
+	
+	<script type="text/javascript">
+		var btn = document.getElementById("myBtn");
+		btn.attachEvent("onclick", function(){
+			alert("Clicked");
+		});
+		btn.attachEvent("onclick", function(){
+			alert(this == window);
+		});
+	</script>
+</html>
